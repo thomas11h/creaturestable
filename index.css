@@ -1,0 +1,236 @@
+/*--Initial----------------------------------------------------------------------------------------------------------------------------------------*/
+@font-face{
+    font-family:"FreeSans";
+    src:url("./fonts/FreeSans-LrmZ.ttf");
+}
+
+body{
+    background-color:#f5f5f5;
+    color:rgb(177,177,177);
+    font-family:"FreeSans";
+    user-select:none;
+    overflow:hidden;
+}
+.game-holder{
+    transform:translate(-50%);
+    position:absolute;
+    width:min(50vh,90vw);
+    height:100%;
+    left:50%;
+    top:0px;
+}
+.window{
+    background-color:#f5f5f5;
+    position:absolute;
+    height:100%;
+    width:100%;
+    left:0px;
+    top:0px;
+}
+#game-screen{
+    display:none;
+}
+
+/*--Titles-----------------------------------------------------------------------------------------------------------------------------------------*/
+.title{
+    font-size:min(2vh,3vw);
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    display:flex;
+    width:100%;
+    left:0px;
+}
+.main-title{
+    top:20%;
+}
+.game-title{
+    top:calc(100% - min(40vh,60vw));
+}
+
+/*--Buttons----------------------------------------------------------------------------------------------------------------------------------------*/
+.button{
+    box-shadow:0px min(0.5vh,0.5vw) min(1vh,1vw) rgba(0,0,0,0.1);
+    background-color:rgb(255,255,255);
+    border-radius:min(2vh,3vw);
+    transform:translateY(0px);
+    justify-content:center;
+    font-size:min(2vh,3vw);
+    height:min(10vh,15vw);
+    margin: min(1vh,1.5vw);
+    align-items:center;
+    cursor:pointer;
+    display:flex;
+}
+.button:hover{
+    transform:translateY(-1px);
+}
+.button:active{
+    transform:translateY(1px);
+}
+.big-button{
+    position:absolute;
+    width:70%;
+    left:15%;
+}
+.small-button{
+    font-size:min(3vh,4vw);
+    height:min(15vh,22.5vw);
+    width:min(20vh,30vw);
+}
+
+#play{
+    top:40%;
+}
+#practice{
+    top:53%;
+}
+
+#skip{
+    bottom:20%;
+    width:min(10vh,30vw);
+    height:min(5vh,22.5vw);
+    position: absolute;
+    left: 80%; /* 70% from the right */
+    bottom: 35%; /* 60% from the bottom */
+}
+
+#NFT{
+    bottom:10%;
+}
+/*--Game Screen------------------------------------------------------------------------------------------------------------------------------------*/
+.button-holder{
+    background-color:#f5f5f5;
+    height:min(35vh,52.5vw);
+    position:absolute;
+    display:none;
+    width:100%;
+    bottom:0px;
+    left:0px;
+}
+.button-holder-row{
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    height:50%;
+    width:100%;
+}
+.img-holder-container{
+    height:calc(97.2% - min(42vh,64vw));
+    position:absolute;
+    overflow:hidden;
+    width:90%;
+    top:2.5%;
+    left:5%;
+}
+.img-holder{
+    padding-left:2%;
+    justify-content:flex-start;
+    align-items:flex-start;
+    position:absolute;
+    flex-wrap:wrap;
+    display:flex;
+    width:100%;
+    bottom:0px;
+    left:0px;
+}
+.img{
+    margin-bottom:0.5vh;
+    margin-top:0.5vh;
+    margin-right:1%;
+    margin-left:1%;
+    width:30%;
+    aspect-ratio:1;
+
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:110%;
+
+    -webkit-animation:"fadeIn ease-in-out 0.2s";
+    -moz-animation:"fadeIn ease-in-out 0.2s";
+    animation:"fadeIn ease-in-out 0.2s";
+}
+.letter{
+    font-size:min(4vh,5vw);
+    margin-bottom:5vh;
+    margin-right:1%;
+    margin-left:23%;
+    width:50%;
+    aspect-ratio:1;
+
+    justify-content:center;
+    align-items:center;
+    display:flex;
+
+    -webkit-animation:"fadeIn ease-in-out 0.2s";
+    -moz-animation:"fadeIn ease-in-out 0.2s";
+    animation:"fadeIn ease-in-out 0.2s";
+
+    box-shadow:0px min(0.5vh,0.5vw) min(1vh,1vw) rgba(0,0,0,0.1);
+    background-color:rgb(255,255,255);
+    border-radius:min(2vh,3vw);
+}
+
+/*--Animations-------------------------------------------------------------------------------------------------------------------------------------*/
+@keyframes moveUp{
+    from {top:calc(100% - min(40vh,60vw));}
+    to {top:calc(50% - min(1vh,1.5vw));}
+}
+@keyframes moveDown{
+    from {top:calc(50% - min(1vh,1.5vw));}
+    to {top:calc(100% - min(40vh,60vw));}
+}
+@keyframes fadeIn{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@keyframes fadeOut{
+    from {opacity:1;}
+    to {opacity:0;}
+}
+@keyframes shrink{
+    from {width:100%;}
+    to {width:30%;}
+}
+
+@-moz-keyframes moveUp{
+    from {top:calc(100% - min(40vh,60vw));}
+    to {top:calc(50% - min(1vh,1.5vw));}
+}
+@-moz-keyframes moveDown{
+    from {top:calc(50% - min(1vh,1.5vw));}
+    to {top:calc(100% - min(40vh,60vw));}
+}
+@-moz-keyframes fadeIn{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-moz-keyframes fadeOut{
+    from {opacity:1;}
+    to {opacity:0;}
+}
+@-moz-keyframes shrink{
+    from {width:100%;}
+    to {width:30%;}
+}
+
+@-webkit-keyframes moveUp{
+    from {top:calc(100% - min(40vh,60vw));}
+    to {top:calc(50% - min(1vh,1.5vw));}
+}
+@-webkit-keyframes moveDown{
+    from {top:calc(50% - min(1vh,1.5vw));}
+    to {top:calc(100% - min(40vh,60vw));}
+}
+@-webkit-keyframes fadeIn{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-webkit-keyframes fadeOut{
+    from {opacity:1;}
+    to {opacity:0;}
+}
+@-webkit-keyframes shrink{
+    from {width:100%;}
+    to {width:30%;}
+}
